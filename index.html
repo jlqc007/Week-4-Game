@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal Game</title>
+
+      <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css">
+      <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+      <div class="row">
+            <div class="col-md-12">
+                  <div class="jumbotron">
+                        <h1 style="color: white">Welcome to J's Jewelers!!!</h1>
+                  </div>
+            </div>
+      </div>
+      
+      <div class="row">
+            <div class="col-md-12">
+                  <h2>Click on each diamond to try and equal the price of the diamonds to win...</h2>
+            </div>
+      </div>
+      
+      <div class="row">
+            <div class="col-md-4">      
+                  
+                  <h1 id="random"></h1>
+                  
+                  </div>
+
+            <div class="col-md-8">
+                  <div class="nav navbar-nav navbar-right">
+                        
+                        <button type="button" id="Crystal1">
+                              <img src="Assets/Images/Diamond1.jpg" alt="Diamond1" width="125" height="200" border="0">
+                              </button>
+                        
+                        <button type="button" id="Crystal2">
+                              <img src="Assets/Images/Diamond2.jpg" alt="Diamond2" width="125" height="200" border="0">
+                              </button>
+                        
+                        <button type="button" id="Crystal3">
+                              <img src="Assets/Images/Diamond3.jpg" alt="Diamond3" width="125" height="200" border="0">
+                              </button>
+                       
+                        <button type="button" id="Crystal4">
+                              <img src="Assets/Images/Diamond4.jpg" alt="Diamond4" width="125" height="200" border="0">
+                              </button>
+                      
+                  </div>
+            </div>
+</div>
+      </div>
+      <div class="row">
+            <div class="col-md-12">
+                  <h1 id="total"></h1>
+            </div>
+      </div>
+ </div>
+ </div>
+<script type="text/javascript">
+
+      var random = Math.floor(Math.random() * 120) + 19;
+      $("#random").html("<p>Price: $" + random + "</p>");
+      
+      var Crystal1 = Math.floor(Math.random() * 12) + 1;
+      var Crystal2 = Math.floor(Math.random() * 12) + 1;
+      var Crystal3 = Math.floor(Math.random() * 12) + 1;
+      var Crystal4 = Math.floor(Math.random() * 12) + 1;
+      
+      var Wins = 0;
+      var Losses = 0;
+      
+      var total = 0;
+      $("#total").html("<p>Total: $" + total + "</p>");
+
+      function resetGame() {
+            var random = Math.floor(Math.random() * 120) + 19;
+            $("#random").html("<p>Price: $" + random + "</p>");
+
+            var total = 0;
+            $("#total").html("<p>Total: $" + total + "</p>");
+      }
+
+
+      $("#Crystal1").on("click", function() {
+      	total += Crystal1;
+            $("#total").html("<p>Total: $" + total + "</p>");
+
+            if (total === random) {
+                  $("#total").html("<h1>YOU WIN!!!</h1>");
+                  resetGame();
+            }
+
+            else if (total >= random) {
+                  $("#total").html("<h1>YOU LOSE!!!</h1>");
+                  resetGame();
+            }
+      })
+
+      $("#Crystal2").on("click", function() {
+            total += Crystal2;
+            $("#total").html("<p>Total: $" + total + "</p>");
+
+            if (total === random) {
+                  $("#total").html("<h1>YOU WIN!!!</h1>");
+                  resetGame();
+            }
+
+            else if (total >= random) {
+                  $("#total").html("<h1>YOU LOSE!!!</h1>");
+                  resetGame();
+            }
+
+            
+      })
+
+      $("#Crystal3").on("click", function() {
+            total += Crystal3;
+            $("#total").html("<p>Total: $" + total + "</p>");
+
+            if (total === random) {
+                  $("#total").html("<h1>YOU WIN!!!</h1>");
+                  resetGame();
+            }
+
+            else if (total >= random) {
+                  $("#total").html("<h1>YOU LOSE!!!</h1>");
+                  resetGame();
+            }
+      })
+
+      $("#Crystal4").on("click", function() {
+            total += Crystal4;
+            $("#total").html("<p>Total: $" + total + "</p>");
+
+            if (total === random) {
+                  $("#total").html("<h1>YOU WIN!!!</h1>");
+                  resetGame();
+            }
+
+            else if (total >= random) {
+                  $("#total").html("<h1>YOU LOSE!!!</h1>");
+                  resetGame();
+            }
+      });
+
+</script>
+
+</body>
+</html>

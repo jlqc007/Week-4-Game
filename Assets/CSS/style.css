@@ -1,0 +1,51 @@
+body {
+	font-family: Times, Times New Roman;
+}
+
+h1 {
+	text-align: center;
+	font-family: Times, Times New Roman;
+}
+
+.container {
+	margin: 25px;
+}
+
+.jumbotron {
+	text-align: center;
+	font-family: Times, Times New Roman;
+	background-image: url("https://blog.brilliance.com/wp-content/uploads/2016/03/invest-in-diamonds1.jpg");
+}
+
+.page-header {
+	clear: both;
+	text-align: center;
+	margin-top: 0px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+h3 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+#Crystal1 {
+	margin-right: 20px;
+}
+
+#Crystal2 {
+	margin-right: 20px;
+}
+
+#Crystal3 {
+	margin-right: 20px;
+}
+
+#Crystal4 {
+	margin-right: 15px;
+}
+
